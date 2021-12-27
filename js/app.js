@@ -37,6 +37,11 @@ Vue.createApp({
             toDoList.splice(index, 1)
             this.localStor()
         },
+        removeStorage() {
+            localStorage.removeItem("needDoList");
+            localStorage.removeItem("completeDoList");
+            window.location.reload();
+        },
         localStor() {
             localStorage.setItem("needDoList", JSON.stringify(this.needDoList));
             localStorage.setItem("completeDoList", JSON.stringify(this.completeDoList));

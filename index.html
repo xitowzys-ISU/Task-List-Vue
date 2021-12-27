@@ -23,40 +23,50 @@
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
 
-                                <h6 class="mb-3">Todo List</h6>
+                                <h3 class="mb-3">Список задач</h3>
+                                <h6 class="mb-3">
+                                    <a href="#!" data-mdb-toggle="tooltip" title="Remove item"
+                                        v-on:click="removeStorage">
+                                        Очистить хранилище
+                                    </a></h6>
 
                                 <form class="d-flex justify-content-center align-items-center mb-4">
                                     <div class="form-outline flex-fill">
-                                        <input type="text" id="form3" class="form-control form-control-lg" v-bind:value="valueInput" v-on:input="handlerInput" v-on:keypress.enter="addTask"/>
+                                        <input type="text" id="form3" class="form-control form-control-lg"
+                                            v-bind:value="valueInput" v-on:input="handlerInput"
+                                            v-on:keypress.enter="addTask" />
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-lg ms-2" v-on:click="addTask">Добавить</button>
+                                    <button type="submit" class="btn btn-primary btn-lg ms-2"
+                                        v-on:click="addTask">Добавить</button>
                                 </form>
 
                                 <ul class="list-group mb-0">
-                                    <h6 class="mb-3">Active</h6>
+                                    <h6 class="mb-3">Активные</h6>
                                     <li v-for="(mask, index) in needDoList" :key="mask.id"
                                         class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
                                         <div class="d-flex align-items-center">
                                             <input class="form-check-input me-2" type="checkbox" value=""
-                                                aria-label="..." v-on:change="doCheck(index, 'need')"/>
+                                                aria-label="..." v-on:change="doCheck(index, 'need')" />
                                             {{ mask.title }}
                                         </div>
-                                        <a href="#!" data-mdb-toggle="tooltip" title="Remove item" v-on:click="removeMask(index, 'need')">
+                                        <a href="#!" data-mdb-toggle="tooltip" title="Remove item"
+                                            v-on:click="removeMask(index, 'need')">
                                             Удалить
                                         </a>
                                     </li>
                                 </ul>
 
                                 <ul class="list-group mb-0">
-                                    <h6 class="mb-3">Done</h6>
+                                    <h6 class="mb-3">Выполненные</h6>
                                     <li v-for="(mask, index) in completeDoList" :key="mask.id"
                                         class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
                                         <div class="d-flex align-items-center">
                                             <input class="form-check-input me-2" type="checkbox" value=""
-                                                aria-label="..." v-on:change="doCheck(index, 'complete')" checked/>
+                                                aria-label="..." v-on:change="doCheck(index, 'complete')" checked />
                                             <s>{{ mask.title }}</s>
                                         </div>
-                                        <a href="#!" data-mdb-toggle="tooltip" title="Remove item" v-on:click="removeMask(index, 'complete')">
+                                        <a href="#!" data-mdb-toggle="tooltip" title="Remove item"
+                                            v-on:click="removeMask(index, 'complete')">
                                             Удалить
                                         </a>
                                     </li>
