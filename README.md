@@ -16,14 +16,14 @@
 
 | Список задач |
 | ------------------------------------------------------------ |
-| ![demo_1](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/interactive-content-scenarios/Task-list/-/raw/main/raw/demo_1.png?inline=false) |
+| ![demo_1](/raw/demo_1.png) |
 
 | Добавлены несколько задач с сохранением в localStorage |
 | ------------------------------------------------------------ |
-| ![demo_1](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/interactive-content-scenarios/Task-list/-/raw/main/raw/demo_2.png?inline=false) |
+| ![demo_2](/raw/demo_2.png) |
 
 | Удаление задачи |
 | ------------------------------------------------------------ |
-| ![demo_1](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/interactive-content-scenarios/Task-list/-/raw/main/raw/demo_3.png?inline=false) |
+| ![demo_3](/raw/demo_3.png) |
 
 
